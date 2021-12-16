@@ -16,7 +16,7 @@ import java.util.Map;
  */
 //@Repository
 @DaoLoad
-public interface MyDAO extends BaseDAO {
-    List<Map<String,Object>> getRecord();
-    int update();
+public interface MyNewDAO extends BaseDAO {
+    String dataSourceName = "test1";
+    int save(Map<String,Object> param);
 }

@@ -5,4 +5,8 @@
     <select id="getRecord" resultType="map">
         select * from  user_info where user='tjj'
     </select>
+
+    <update id="update">
+        update user_info set beizhu='ceshi' where user='tjj'
+    </update>
 </mapper>

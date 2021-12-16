@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -22,6 +23,8 @@ public class MyController {
 
     @RequestMapping(value="/getRecord",method = RequestMethod.GET)
     public Map<String,Object> test(){
-        return service.getRecordInfo();
+        Map<String,Object> result = new HashMap<>();
+        result.put("data",service.getRecordInfo());
+        return result;
     }
 }
